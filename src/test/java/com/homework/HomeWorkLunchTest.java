@@ -35,4 +35,29 @@ public class HomeWorkLunchTest extends TestCase {
     public void testIsNegative1NumberNegative() {
         assertEquals(HomeWorkLunch.isNumberPositive(-1), false) ;
     }
+
+    public void testIs2020LeapYearCustom() {
+        assertEquals(HomeWorkLunch.isLeapYearCustom(2020), true);
+        assertEquals(HomeWorkLunch.isLeapYearUtil(2020), true);
+    }
+
+    public void testIs2021LeapYearCustom() {
+        assertEquals(HomeWorkLunch.isLeapYearCustom(2021), false);
+        assertEquals(HomeWorkLunch.isLeapYearUtil(2021), false);
+    }
+
+    public void testIs2022LeapYearCustom() {
+        assertEquals(HomeWorkLunch.isLeapYearCustom(2022), false);
+        assertEquals(HomeWorkLunch.isLeapYearUtil(2022), false);
+    }
+
+    public void testIs2023LeapYearCustom() {
+        assertEquals(HomeWorkLunch.isLeapYearCustom(2023), false);
+        assertEquals(HomeWorkLunch.isLeapYearUtil(2023), false);
+    }
+
+    public void testIs2024LeapYearCustom() {
+        assertEquals(HomeWorkLunch.isLeapYearCustom(2024), true);
+        assertEquals(HomeWorkLunch.isLeapYearUtil(2024), true);
+    }
 }
