@@ -6,6 +6,9 @@ public class HomeWorkLunch {
 
     private static final int MIN_LIMIT = 10;
     private static final int MAX_LIMIT = 20;
+    private static final int LEAP_YEAR_DIVIDER = 4;
+    private static final int EXCLUDE_YEAR_DIVIDER = 100;
+    private static final int CENTURIAL_YEAR = 400;
 
     public static void main(String[] args) {
         boolean isInRange = isWithinRange(3, 3);
@@ -36,7 +39,7 @@ public class HomeWorkLunch {
     }
 
     public static boolean isLeapYearCustom(int year) {
-        return year % 4 == 0;
+        return year % LEAP_YEAR_DIVIDER == 0 && ((year % EXCLUDE_YEAR_DIVIDER != 0) || (year % CENTURIAL_YEAR == 0));
     }
 
     private static void printIntegerStatus(int number) {
@@ -52,6 +55,5 @@ public class HomeWorkLunch {
             System.out.println(text);
         }
     }
-
 
 }

@@ -60,4 +60,14 @@ public class HomeWorkLunchTest extends TestCase {
         assertEquals(HomeWorkLunch.isLeapYearCustom(2024), true);
         assertEquals(HomeWorkLunch.isLeapYearUtil(2024), true);
     }
+
+    public void testIs2000CenturyYearCustom() {
+        assertEquals(HomeWorkLunch.isLeapYearUtil(2000), true);
+        assertEquals(HomeWorkLunch.isLeapYearCustom(2000), true);
+    }
+
+    public void testIs1900NonCenturyYearCustom() {
+        assertEquals(HomeWorkLunch.isLeapYearUtil(1900), false);
+        assertEquals(HomeWorkLunch.isLeapYearCustom(1900), false);
+    }
 }
